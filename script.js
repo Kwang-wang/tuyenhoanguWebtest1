@@ -1,60 +1,57 @@
-const backToTop = document.querySelector(".back-to-top");
-const track = document.querySelector(".slider-track");
-const dots = [...document.querySelectorAll("[data-slide-dot]")];
-const prevButton = document.querySelector("[data-slider-prev]");
-const nextButton = document.querySelector("[data-slider-next]");
-const slides = [...document.querySelectorAll(".course-slide")];
-let activeSlide = 1;
-let autoTimer;
-let autoResumeTimer;
+const menuToggle = document.querySelector(".menu-toggle");
+const menuClose = document.querySelector(".menu-close");
+const mobileMenu = document.querySelector(".mobile-menu");
+const contactToggle = document.querySelector(".contact-dock__toggle");
+const contactPanel = document.querySelector(".contact-dock__panel");
+const contactLinks = {
+  phone: { href: "tel:+84906254982" },
+  zalo: { href: "https://zalo.me/0906254982", external: true },
+  tiktok: { href: "https://www.tiktok.com/@tuyenhoangu", external: true },
+};
 
-function setSlide(index) {
-  activeSlide = (index + slides.length) % slides.length;
-  track.style.transform = `translateX(-${activeSlide * 100}%)`;
-  dots.forEach((dot, dotIndex) => {
-    dot.classList.toggle("is-active", dotIndex === activeSlide);
-    dot.setAttribute("aria-selected", String(dotIndex === activeSlide));
-  });
+function setMenu(open) {
+  mobileMenu.classList.toggle("is-open", open);
+  mobileMenu.setAttribute("aria-hidden", String(!open));
+  menuToggle.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
 }
 
-function startAutoSlide() {
-  window.clearInterval(autoTimer);
-  autoTimer = window.setInterval(() => setSlide(activeSlide + 1), 6500);
+menuToggle.addEventListener("click", () => setMenu(true));
+menuClose.addEventListener("click", () => setMenu(false));
+mobileMenu.addEventListener("click", (event) => {
+  if (event.target === mobileMenu || event.target.closest("a")) {
+    setMenu(false);
+  }
+});
+
+function setContactPanel(open) {
+  contactToggle.setAttribute("aria-expanded", String(open));
+  contactPanel.hidden = !open;
 }
 
-function restartAutoSlide() {
-  window.clearInterval(autoTimer);
-  window.clearTimeout(autoResumeTimer);
-  autoResumeTimer = window.setTimeout(startAutoSlide, 1200);
-}
-
-dots.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    setSlide(Number(dot.dataset.slideDot));
-    restartAutoSlide();
-  });
+contactToggle.addEventListener("click", () => {
+  setContactPanel(contactPanel.hidden);
 });
 
-prevButton.addEventListener("click", () => {
-  setSlide(activeSlide - 1);
-  restartAutoSlide();
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenu(false);
+    setContactPanel(false);
+  }
 });
 
-nextButton.addEventListener("click", () => {
-  setSlide(activeSlide + 1);
-  restartAutoSlide();
-});
+document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    const isOpen = button.getAttribute("aria-expanded") === "true";
 
-document.querySelector(".course-slider").addEventListener("mouseenter", () => window.clearInterval(autoTimer));
-document.querySelector(".course-slider").addEventListener("mouseleave", startAutoSlide);
+    document.querySelectorAll(".faq-question").forEach((item) => {
+      item.setAttribute("aria-expanded", "false");
+      item.nextElementSibling.hidden = true;
+    });
 
-document.querySelectorAll(".magnetic").forEach((element) => {
-  element.addEventListener("pointermove", (event) => {
-    const rect = element.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    element.style.setProperty("--x", `${x}%`);
-    element.style.setProperty("--y", `${y}%`);
+    button.setAttribute("aria-expanded", String(!isOpen));
+    answer.hidden = isOpen;
   });
 });
 
@@ -67,18 +64,26 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.16 }
 );
 
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
-window.addEventListener("scroll", () => {
-  backToTop.classList.toggle("is-visible", window.scrollY > 640);
-});
+document.querySelectorAll("[data-contact]").forEach((link) => {
+  const config = contactLinks[link.dataset.contact];
+  if (config) {
+    link.href = config.href;
+    if (config.external) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+  }
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  link.addEventListener("click", () => {
+    const detail = {
+      channel: link.dataset.contact,
+      location: link.dataset.location || "unknown",
+    };
+    window.dispatchEvent(new CustomEvent("contact_click", { detail }));
+  });
 });
-
-setSlide(activeSlide);
-startAutoSlide();

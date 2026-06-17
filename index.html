@@ -1,263 +1,491 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tuyên Hoa Ngữ | Tiếng Trung thực dụng cho giao tiếp và công việc</title>
+    <title>Tuyên Hoa Ngữ | Tiếng Trung giao tiếp và công việc thực chiến</title>
     <meta
       name="description"
-      content="Landing page Tuyên Hoa Ngữ: học tiếng Trung giao tiếp không căng não và tiếng Trung công việc thực chiến theo tình huống thật, có sửa bài và theo sát."
+      content="Học tiếng Trung giao tiếp và tiếng Trung công việc theo tình huống thực tế. Lộ trình dành cho người mới, người bận rộn và người làm việc trong doanh nghiệp Trung Quốc."
     />
+    <link rel="canonical" href="https://kwang-wang.github.io/tuyenhoanguWebtest1/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tuyên Hoa Ngữ | Tiếng Trung giao tiếp và công việc thực chiến" />
+    <meta
+      property="og:description"
+      content="Học tiếng Trung giao tiếp và tiếng Trung công việc theo tình huống thực tế cùng Tuyên Hoa Ngữ."
+    />
+    <meta property="og:image" content="brand/tuyen-hoa-ngu-logo.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="brand/favicon-48.png" />
+    <link rel="apple-touch-icon" href="brand/favicon-192.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800;900&family=Noto+Serif+SC:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization",
+            "name": "Tuyên Hoa Ngữ",
+            "url": "https://kwang-wang.github.io/tuyenhoanguWebtest1/",
+            "logo": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/tuyen-hoa-ngu-logo.webp",
+            "sameAs": ["https://www.tiktok.com/@tuyenhoangu"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+84906254982",
+              "contactType": "customer support",
+              "areaServed": "VN",
+              "availableLanguage": ["vi", "zh"]
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#thay-tuyen",
+            "name": "Thầy Tuyên",
+            "affiliation": { "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization" },
+            "jobTitle": "Giảng viên tiếng Trung giao tiếp và tiếng Trung công việc",
+            "alumniOf": "Đại học Hoa Kiều Phúc Kiến",
+            "image": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/thay-tuyen-portrait.webp"
+          },
+          {
+            "@type": "Course",
+            "name": "Tiếng Trung giao tiếp không căng não",
+            "description": "Lộ trình giúp người học xây dựng khả năng nghe hiểu, nói tự nhiên và phản xạ trong những tình huống giao tiếp đời sống thường gặp.",
+            "provider": { "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "659000",
+              "priceCurrency": "VND",
+              "category": "Học phí mua sớm hiện tại"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Tiếng Trung công việc thực chiến",
+            "description": "Lộ trình dành cho người cần sử dụng tiếng Trung trong doanh nghiệp Trung Quốc, từ công xưởng và văn phòng đến hành chính, nhân sự, thương mại và đàm phán.",
+            "provider": { "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "789000",
+              "priceCurrency": "VND",
+              "category": "Học phí mua sớm hiện tại"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" data-site-header>
       <a class="brand" href="#top" aria-label="Tuyên Hoa Ngữ">
-        <span class="brand-mark">宣</span>
-        <span class="brand-text">Tuyên Hoa Ngữ</span>
+        <img src="brand/tuyen-hoa-ngu-logo.webp" width="48" height="48" alt="Logo Tuyên Hoa Ngữ" />
+        <span>Tuyên Hoa Ngữ</span>
       </a>
+
       <nav class="main-nav" aria-label="Điều hướng chính">
         <a href="#courses">Khóa học</a>
-        <a href="#method">Cách học</a>
+        <a href="#method">Phương pháp</a>
         <a href="#pathways">Lộ trình</a>
+        <a href="#teacher">Về thầy Tuyên</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-small btn-primary magnetic" href="tel:+84906254982">Tư vấn</a>
+
+      <a class="btn btn-primary btn-small" href="#" data-contact="zalo" data-location="header" target="_blank" rel="noopener noreferrer">
+        Nhận tư vấn
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__panel">
+        <div class="mobile-menu__top">
+          <strong>Tuyên Hoa Ngữ</strong>
+          <button class="menu-close" type="button" aria-label="Đóng menu">×</button>
+        </div>
+        <nav aria-label="Menu di động">
+          <a href="#courses">Khóa học</a>
+          <a href="#method">Phương pháp</a>
+          <a href="#pathways">Lộ trình</a>
+          <a href="#teacher">Về thầy Tuyên</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-primary" href="#" data-contact="zalo" data-location="mobile_menu" target="_blank" rel="noopener noreferrer">
+          Nhận tư vấn
+        </a>
+      </div>
+    </div>
+
     <main id="top">
-      <section class="hero-section">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Tiếng Trung ứng dụng, không học cho có</p>
-          <h1>Học tiếng Trung để nói được, hiểu được và dùng được trong việc thật.</h1>
-          <p class="hero-lead">
-            Tuyên Hoa Ngữ biến kiến thức tiếng Trung thành tình huống rõ ràng: giao tiếp đời sống,
-            phản xạ nhanh, công xưởng, văn phòng, thương mại và làm việc với doanh nghiệp Trung Quốc.
+      <section class="hero section-shell">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Tiếng Trung ứng dụng cho người bận rộn và người đi làm</p>
+          <h1>Học tiếng Trung để nghe hiểu, nói đúng và dùng được trong công việc.</h1>
+          <p class="hero__lead">
+            Tuyên Hoa Ngữ giúp người mới, người bận rộn và người đi làm học tiếng Trung theo tình huống thật — từ giao tiếp đời sống đến công xưởng, văn phòng và thương mại.
           </p>
+          <ul class="hero-points" aria-label="Ba điểm nổi bật">
+            <li>Nghe và hiểu ý trong ngữ cảnh thực tế.</li>
+            <li>Luyện cách nói tự nhiên, không dịch từng chữ.</li>
+            <li>Phản xạ trong giao tiếp và xử lý công việc.</li>
+          </ul>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-large magnetic" href="tel:+84906254982">Nhận tư vấn lộ trình</a>
-            <a class="btn btn-ghost btn-large magnetic" href="#courses">Xem khóa phù hợp</a>
+            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="hero" target="_blank" rel="noopener noreferrer">
+              Nhận tư vấn lộ trình
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-secondary" href="#courses">Xem 2 khóa học</a>
           </div>
         </div>
 
-        <aside class="hero-board reveal" aria-label="Tổng quan phương pháp Tuyên Hoa Ngữ">
-          <div class="board-top">
-            <span>今日目标</span>
-            <strong>Học để dùng ngay</strong>
+        <div class="hero__media reveal">
+          <div class="teacher-frame">
+            <img
+              src="brand/thay-tuyen-portrait.webp"
+              width="520"
+              height="760"
+              alt="Thầy Tuyên – giảng viên tiếng Trung giao tiếp và tiếng Trung công việc"
+              fetchpriority="high"
+            />
           </div>
-          <div class="speech-card active">
-            <span class="hanzi">听</span>
-            <div>
-              <strong>Nghe hiểu</strong>
-              <p>Nhận diện ý trong ngữ cảnh thật.</p>
-            </div>
+          <div class="hero-badge" aria-label="100 bài học trong 2 lộ trình">
+            <strong>100</strong>
+            <span>bài học trong 2 lộ trình</span>
           </div>
-          <div class="speech-card">
-            <span class="hanzi">说</span>
-            <div>
-              <strong>Luyện ngữ điệu</strong>
-              <p>Nói tự nhiên, không dịch từng chữ.</p>
-            </div>
-          </div>
-          <div class="speech-card">
-            <span class="hanzi">用</span>
-            <div>
-              <strong>Phản xạ nhanh</strong>
-              <p>Hỏi đáp, báo cáo, xử lý tình huống.</p>
-            </div>
-          </div>
-          <div class="floating-note">48 + 52 bài học trọng tâm</div>
-        </aside>
+          <svg class="hero-orbit" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M25 116C32 48 92 17 149 33c58 17 69 86 36 127-35 43-109 44-145 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 12" />
+          </svg>
+        </div>
       </section>
 
-      <section class="trust-strip" aria-label="Điểm tin cậy">
+      <section class="proof-strip section-shell" aria-label="Bằng chứng ngắn">
         <article class="reveal">
           <strong>10+ năm</strong>
-          <span>kinh nghiệm tiếng Trung giao tiếp, thương mại và doanh nghiệp</span>
+          <span>Kinh nghiệm tiếng Trung giao tiếp, thương mại và doanh nghiệp</span>
+        </article>
+        <article class="reveal">
+          <strong>100 bài học</strong>
+          <span>Trong hai lộ trình giao tiếp và công việc</span>
         </article>
         <article class="reveal">
           <strong>3 bước</strong>
-          <span>nghe hiểu, luyện ngữ điệu, phản xạ nhanh</span>
+          <span>Nghe hiểu – luyện ngữ điệu – phản xạ nhanh</span>
         </article>
         <article class="reveal">
-          <strong>Như 1:1</strong>
-          <span>bài tập, nhóm học riêng, sửa bài trực tiếp</span>
+          <strong>Sửa bài trực tiếp</strong>
+          <span>Được theo sát và góp ý sau quá trình thực hành</span>
         </article>
       </section>
 
-      <section id="courses" class="courses-section">
+      <section class="problem-section section-shell">
         <div class="section-heading reveal">
-          <p class="eyebrow">Giới thiệu khóa học</p>
-          <h2>Chọn đúng đường học, đỡ mất sức.</h2>
-          <p>
-            Phần khóa học được trình bày dạng slider để người xem xử lý từng lựa chọn một,
-            không bị ngợp bởi quá nhiều module ngay từ đầu.
-          </p>
+          <p class="eyebrow">Vì sao học mãi vẫn khó dùng?</p>
+          <h2>Bạn không thiếu cố gắng. Bạn chỉ đang học chưa đúng ngữ cảnh.</h2>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card reveal">
+            <span>01</span>
+            <p>Học nhiều từ nhưng khi người Trung nói vẫn không nghe kịp.</p>
+          </article>
+          <article class="problem-card reveal">
+            <span>02</span>
+            <p>Biết cấu trúc câu nhưng đến lúc cần nói lại không phản xạ được.</p>
+          </article>
+          <article class="problem-card reveal">
+            <span>03</span>
+            <p>Đi làm gặp đúng tình huống nhưng không biết diễn đạt sao cho rõ và tự nhiên.</p>
+          </article>
+        </div>
+        <p class="problem-note reveal">
+          Vì vậy, bài học của Tuyên Hoa Ngữ không dừng ở việc ghi nhớ từ vựng. Người học được luyện nghe, luyện cách nói và dùng câu trong đúng tình huống thực tế.
+        </p>
+      </section>
+
+      <section id="courses" class="courses-section section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Chọn lộ trình phù hợp</p>
+          <h2>Hai khóa học. Hai nhu cầu rõ ràng.</h2>
+          <p>Chọn theo mục tiêu hiện tại của bạn, không cần học lan man hoặc đăng ký quá nhiều chương trình cùng lúc.</p>
         </div>
 
-        <div class="course-slider reveal" aria-roledescription="carousel" aria-label="Các khóa học Tuyên Hoa Ngữ">
-          <div class="slider-shell">
-            <div class="slider-track">
-              <article class="course-slide" aria-label="Khóa Tiếng Trung Basics">
-                <div class="slide-kicker">Nền tảng</div>
-                <h3>Basics</h3>
-                <p>
-                  Dành cho người muốn xây nền tiếng Trung vững chắc trước khi bước vào giao tiếp
-                  hoặc công việc. Trọng tâm là phát âm, câu cơ bản, phản xạ ban đầu.
-                </p>
-                <ul>
-                  <li>Phù hợp người mới bắt đầu hoặc mất gốc.</li>
-                  <li>Học phí từ 85.000 đồng/buổi theo nhóm lớp hiện có.</li>
-                  <li>Làm quen tư duy nghe - hiểu - nói thay vì học thuộc rời rạc.</li>
-                </ul>
-              </article>
-
-              <article class="course-slide is-featured" aria-label="Khóa giao tiếp không căng não">
-                <div class="slide-kicker">48 bài học</div>
-                <h3>Giao tiếp không căng não</h3>
-                <p>
-                  Dành cho người bận rộn hoặc tự ti khi học ngoại ngữ. Học để giao tiếp đời sống
-                  theo cách dễ tiếp cận, không sa vào ngữ pháp nặng và học vẹt.
-                </p>
-                <ul>
-                  <li>Thực hành sâu 3 giai đoạn: nghe hiểu, ngữ điệu, phản xạ nhanh.</li>
-                  <li>Sau 3-6 tháng có nền giao tiếp cho đời sống, du lịch, làm việc.</li>
-                  <li>Mua sớm: 659K.</li>
-                </ul>
-              </article>
-
-              <article class="course-slide" aria-label="Khóa tiếng Trung công việc thực chiến">
-                <div class="slide-kicker">52 bài học</div>
-                <h3>Công việc thực chiến</h3>
-                <p>
-                  Dành cho người đi làm cần dùng tiếng Trung trong doanh nghiệp Trung Quốc:
-                  công xưởng, văn phòng, hành chính, nhân sự, thương mại và đàm phán.
-                </p>
-                <ul>
-                  <li>Mẫu câu dùng ngay trong công việc thật.</li>
-                  <li>Module chuyên sâu: công xưởng, văn phòng, thương mại.</li>
-                  <li>Mua sớm: 789K, có 1 năm hỗ trợ và sửa bài.</li>
-                </ul>
-              </article>
+        <div class="course-grid" aria-label="Hai khóa học chính">
+          <article class="course-card reveal">
+            <div class="course-label">Dành cho người mới và người bận rộn</div>
+            <h3>Tiếng Trung giao tiếp không căng não</h3>
+            <p>
+              Lộ trình giúp người học xây dựng khả năng nghe hiểu, nói tự nhiên và phản xạ trong những tình huống giao tiếp đời sống thường gặp.
+            </p>
+            <ul>
+              <li>48 bài học từ cơ bản đến nâng cao.</li>
+              <li>Giao tiếp đời sống, sinh hoạt, du lịch và các tình huống thường ngày.</li>
+              <li>Thực hành sâu qua ba giai đoạn: nghe hiểu, luyện ngữ điệu, phản xạ nhanh.</li>
+              <li>Được hướng dẫn và sửa bài trực tiếp trong quá trình học.</li>
+            </ul>
+            <div class="price-box">
+              <span>Học phí mua sớm hiện tại</span>
+              <strong>659.000đ</strong>
             </div>
-          </div>
+            <a class="btn btn-secondary" href="#" data-contact="zalo" data-location="course_communication" target="_blank" rel="noopener noreferrer">
+              Tìm hiểu khóa giao tiếp
+            </a>
+          </article>
 
-          <div class="slider-controls" aria-label="Điều khiển slider khóa học">
-            <button class="slider-btn magnetic" type="button" data-slider-prev aria-label="Khóa trước">←</button>
-            <div class="slider-dots" role="tablist" aria-label="Chọn khóa học">
-              <button class="is-active" type="button" data-slide-dot="0" aria-label="Xem Basics"></button>
-              <button type="button" data-slide-dot="1" aria-label="Xem giao tiếp không căng não"></button>
-              <button type="button" data-slide-dot="2" aria-label="Xem công việc thực chiến"></button>
+          <article class="course-card course-card--featured reveal">
+            <div class="course-label">Dành cho người đi làm</div>
+            <h3>Tiếng Trung công việc thực chiến</h3>
+            <p>
+              Lộ trình dành cho người cần sử dụng tiếng Trung trong doanh nghiệp Trung Quốc, từ công xưởng và văn phòng đến hành chính, nhân sự, thương mại và đàm phán.
+            </p>
+            <ul>
+              <li>52 bài học thực chiến.</li>
+              <li>Mẫu câu dùng trong công xưởng, văn phòng, hành chính, nhân sự và thương mại.</li>
+              <li>Luyện báo cáo, giao việc, họp, email, xử lý lỗi, phản hồi và đàm phán.</li>
+              <li>Có một năm hỗ trợ và sửa bài theo thông tin khóa học hiện tại.</li>
+            </ul>
+            <div class="price-box">
+              <span>Học phí mua sớm hiện tại</span>
+              <strong>789.000đ</strong>
             </div>
-            <button class="slider-btn magnetic" type="button" data-slider-next aria-label="Khóa tiếp theo">→</button>
-          </div>
+            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="course_work" target="_blank" rel="noopener noreferrer">
+              Tìm hiểu khóa công việc
+            </a>
+          </article>
         </div>
       </section>
 
-      <section id="method" class="method-section">
+      <section id="method" class="method-section section-shell">
         <div class="section-heading reveal">
-          <p class="eyebrow">Cách học</p>
-          <h2>Không chỉ học từ vựng. Học cách dùng câu trong tình huống.</h2>
+          <p class="eyebrow">Phương pháp thực hành sâu</p>
+          <h2>Một bài học đi qua ba bước để biến kiến thức thành phản xạ.</h2>
         </div>
         <div class="method-grid">
           <article class="method-card reveal">
-            <span>01</span>
+            <span class="hanzi" lang="zh">听</span>
             <h3>Nghe để hiểu ý</h3>
-            <p>Học theo đoạn hội thoại và ngữ cảnh để biết người nói đang muốn gì.</p>
+            <p>Nghe hội thoại trong ngữ cảnh để nhận biết người nói đang muốn truyền đạt điều gì, thay vì chỉ cố bắt từng từ riêng lẻ.</p>
           </article>
           <article class="method-card reveal">
-            <span>02</span>
-            <h3>Nói để đúng nhịp</h3>
-            <p>Luyện ngữ điệu, cách ngắt câu và mẫu phản hồi tự nhiên hơn.</p>
+            <span class="hanzi" lang="zh">说</span>
+            <h3>Nói đúng ngữ điệu</h3>
+            <p>Luyện thanh điệu, cách ngắt câu và nhịp nói để câu tiếng Trung rõ ràng và tự nhiên hơn.</p>
           </article>
           <article class="method-card reveal">
-            <span>03</span>
-            <h3>Dùng để xử lý việc</h3>
-            <p>Thực hành báo cáo, hỏi lại, đặt lịch, thương lượng, phản hồi và nhờ hỗ trợ.</p>
+            <span class="hanzi" lang="zh">用</span>
+            <h3>Dùng trong tình huống thật</h3>
+            <p>Luyện hỏi đáp, báo cáo, nhờ hỗ trợ, đặt lịch, phản hồi và xử lý công việc để hình thành phản xạ.</p>
           </article>
         </div>
       </section>
 
-      <section id="pathways" class="pathway-section">
+      <section id="pathways" class="pathway-section section-shell">
         <div class="section-heading reveal">
-          <p class="eyebrow">Lộ trình nội dung</p>
-          <h2>Những tình huống học viên thật sự cần.</h2>
+          <p class="eyebrow">Học những tình huống thật sự cần</p>
+          <h2>Từ giao tiếp hằng ngày đến công việc trong doanh nghiệp Trung Quốc.</h2>
         </div>
         <div class="pathway-grid">
           <article class="pathway-card reveal">
-            <span class="tag">Công xưởng</span>
-            <h3>Nhận việc, báo cáo, tiến độ</h3>
-            <p>An toàn lao động, lỗi phát sinh, vật tư, giao nhiệm vụ, xác nhận deadline.</p>
+            <span class="path-icon" aria-hidden="true">日</span>
+            <h3>Giao tiếp đời sống</h3>
+            <p>Chào hỏi, giới thiệu bản thân, hỏi đường, mua sắm, đặt lịch, gọi điện và xử lý các tình huống thường ngày.</p>
           </article>
           <article class="pathway-card reveal">
-            <span class="tag">Văn phòng</span>
-            <h3>Hành chính, nhân sự, email</h3>
-            <p>Xin gửi tài liệu, họp tuần, lịch hẹn, tuyển dụng, hóa đơn, công nợ.</p>
+            <span class="path-icon" aria-hidden="true">工</span>
+            <h3>Công xưởng và sản xuất</h3>
+            <p>Nhận việc, bàn giao, an toàn lao động, lỗi phát sinh, dụng cụ, vật tư, tiến độ, giao nhiệm vụ và xác nhận deadline.</p>
           </article>
           <article class="pathway-card reveal">
-            <span class="tag">Thương mại</span>
-            <h3>Mua bán và đàm phán</h3>
-            <p>Đặt hàng, đổi đơn, phản hồi chất lượng, khiếu nại, hợp đồng và điều khoản.</p>
+            <span class="path-icon" aria-hidden="true">办</span>
+            <h3>Văn phòng và hành chính</h3>
+            <p>Xin gửi tài liệu, email công việc, họp tuần, lịch hẹn, tuyển dụng, chính sách nội bộ, hóa đơn và công nợ.</p>
           </article>
           <article class="pathway-card reveal">
-            <span class="tag">Giao tiếp</span>
-            <h3>Đời sống và phản xạ</h3>
-            <p>Chào hỏi, giới thiệu, hỏi đường, mua sắm, du lịch, lịch hẹn và trò chuyện cơ bản.</p>
+            <span class="path-icon" aria-hidden="true">商</span>
+            <h3>Thương mại và đàm phán</h3>
+            <p>Đặt hàng, thay đổi đơn hàng, phản hồi chất lượng, xử lý khiếu nại, đàm phán, hợp đồng và điều khoản.</p>
           </article>
+        </div>
+        <a class="btn btn-secondary pathway-cta" href="#" data-contact="zalo" data-location="pathway" target="_blank" rel="noopener noreferrer">
+          Xem lộ trình bài học chi tiết
+        </a>
+      </section>
+
+      <section id="teacher" class="teacher-section section-shell">
+        <div class="teacher-card reveal">
+          <div class="teacher-photo">
+            <img
+              src="brand/thay-tuyen-portrait.webp"
+              width="520"
+              height="760"
+              alt="Thầy Tuyên – người trực tiếp xây dựng lộ trình và sửa bài"
+              loading="lazy"
+            />
+          </div>
+          <div class="teacher-copy">
+            <p class="eyebrow">Người đồng hành của bạn</p>
+            <h2>Học với người hiểu cả ngôn ngữ lẫn môi trường doanh nghiệp.</h2>
+            <p>
+              Thầy Tuyên xây dựng bài học từ những tình huống người Việt thường gặp khi giao tiếp và làm việc với người Trung Quốc. Mục tiêu không chỉ là biết thêm từ mới, mà là biết nên nghe gì, nói thế nào và xử lý ra sao trong từng hoàn cảnh.
+            </p>
+            <ul>
+              <li>Tốt nghiệp Đại học Hoa Kiều Phúc Kiến, chuyên ngành tiếng Trung thương mại.</li>
+              <li>Có kinh nghiệm trong đào tạo tiếng Trung giao tiếp, thương mại và doanh nghiệp.</li>
+              <li>Hiểu các bối cảnh công xưởng, văn phòng và làm việc với doanh nghiệp Trung Quốc.</li>
+              <li>Trực tiếp xây dựng lộ trình, hướng dẫn và sửa bài.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="consult-section reveal">
-        <div>
-          <p class="eyebrow">Gợi ý nhanh</p>
-          <h2>Không chắc nên bắt đầu từ đâu?</h2>
+      <section class="final-cta section-shell">
+        <div class="final-cta__content reveal">
+          <p class="eyebrow">Tư vấn lộ trình</p>
+          <h2>Chưa chắc nên bắt đầu từ khóa nào?</h2>
           <p>
-            Nếu bạn nói mục tiêu, thời gian học và mức hiện tại, Tuyên Hoa Ngữ sẽ gợi ý hướng học
-            phù hợp: nền tảng, giao tiếp hay công việc.
+            Hãy cho Tuyên Hoa Ngữ biết trình độ hiện tại, mục tiêu và thời gian bạn có thể học. Bạn sẽ được gợi ý lộ trình phù hợp giữa giao tiếp và tiếng Trung công việc.
           </p>
+          <div class="final-cta__actions">
+            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="final_cta" target="_blank" rel="noopener noreferrer">
+              Nhắn Zalo để được tư vấn
+            </a>
+            <a class="btn btn-secondary" href="#" data-contact="phone" data-location="final_cta">Gọi 0906 254 982</a>
+          </div>
         </div>
-        <a class="btn btn-primary btn-large magnetic" href="tel:+84906254982">Gọi 0906 254 982</a>
       </section>
 
-      <section id="faq" class="faq-section">
+      <section id="faq" class="faq-section section-shell">
         <div class="section-heading reveal">
           <p class="eyebrow">FAQ</p>
-          <h2>Giải tỏa băn khoăn trước khi học.</h2>
+          <h2>Giải đáp những băn khoăn trước khi học</h2>
         </div>
         <div class="faq-list">
-          <details class="reveal">
-            <summary>Tôi mất gốc có học được không?</summary>
-            <p>Có. Nếu cần nền tảng trước, bạn bắt đầu từ Basics hoặc khóa giao tiếp không căng não.</p>
-          </details>
-          <details class="reveal">
-            <summary>Tôi đi làm bận, có theo được không?</summary>
-            <p>Có thể học chủ động qua bài giảng, tài liệu, bài tập nhóm và được sửa bài sau mỗi bài.</p>
-          </details>
-          <details class="reveal">
-            <summary>Khóa công việc khác gì khóa giao tiếp?</summary>
-            <p>Khóa công việc đi sâu vào công xưởng, văn phòng, nhân sự, báo cáo, thương mại và đàm phán.</p>
-          </details>
-          <details class="reveal">
-            <summary>Có được sửa bài trực tiếp không?</summary>
-            <p>Có. Đây là điểm quan trọng của cả hai khóa: học linh hoạt nhưng vẫn được theo sát.</p>
-          </details>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Tôi mất gốc có học được không?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Có. Khóa giao tiếp được xây dựng từ nền tảng và phù hợp với người mới hoặc người từng học nhưng đã quên. Bạn nên trao đổi trình độ hiện tại để được hướng dẫn điểm bắt đầu phù hợp.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Tôi đi làm bận, có theo được không?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Bài học được thiết kế để người học có thể chủ động thời gian. Điều quan trọng là duy trì thời gian luyện tập đều đặn thay vì học dồn trong một vài buổi.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Khóa công việc khác khóa giao tiếp như thế nào?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Khóa giao tiếp tập trung vào đời sống và phản xạ hằng ngày. Khóa công việc đi sâu vào công xưởng, văn phòng, hành chính, nhân sự, báo cáo, email, thương mại và đàm phán.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Tôi nên chọn khóa nào?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Nếu mục tiêu chính là xây dựng nền tảng và giao tiếp đời sống, hãy bắt đầu với khóa giao tiếp. Nếu bạn đang đi làm và cần dùng tiếng Trung trong doanh nghiệp, khóa công việc sẽ phù hợp hơn.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Có được hướng dẫn và sửa bài trực tiếp không?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Có. Người học được hướng dẫn thực hành và nhận góp ý sửa bài theo hình thức hỗ trợ của từng khóa học.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Đăng ký học bằng cách nào?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Bạn có thể nhắn Zalo hoặc gọi điện để được xác nhận khóa học phù hợp và hướng dẫn đăng ký.</p>
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <strong>Tuyên Hoa Ngữ</strong>
-      <span>Tiếng Trung rõ ràng, thực tế, dùng được.</span>
-      <a href="https://www.tiktok.com/@tuyenhoangu" target="_blank" rel="noreferrer">TikTok @tuyenhoangu</a>
+    <aside class="contact-dock" aria-label="Kênh tư vấn nhanh">
+      <button class="contact-dock__toggle" type="button" aria-expanded="false" aria-controls="contact-panel">
+        Tư vấn
+      </button>
+      <div class="contact-dock__panel" id="contact-panel" hidden>
+        <a href="#" data-contact="zalo" data-location="floating_contact" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
+          Zalo
+        </a>
+        <a href="#" data-contact="phone" data-location="floating_contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
+          Gọi điện
+        </a>
+        <a href="#" data-contact="tiktok" data-location="floating_contact" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v9a4 4 0 1 1-4-4" /><path d="M14 4c1 3 3 5 6 5" /></svg>
+          TikTok
+        </a>
+      </div>
+    </aside>
+
+    <nav class="mobile-contact-bar" aria-label="Liên hệ nhanh trên di động">
+      <a href="#" data-contact="zalo" data-location="mobile_contact" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
+        Zalo
+      </a>
+      <a href="#" data-contact="phone" data-location="mobile_contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
+        Gọi
+      </a>
+      <a href="#contact-more">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14" /></svg>
+        Thêm
+      </a>
+    </nav>
+
+    <footer class="site-footer" id="contact-more">
+      <div class="footer-brand">
+        <img src="brand/tuyen-hoa-ngu-logo.webp" width="56" height="56" alt="Logo Tuyên Hoa Ngữ" loading="lazy" />
+        <div>
+          <strong>Tuyên Hoa Ngữ</strong>
+          <p>Tiếng Trung rõ ràng, thực tế và dùng được.</p>
+        </div>
+      </div>
+      <nav aria-label="Liên kết cuối trang">
+        <a href="#courses">Khóa học</a>
+        <a href="#method">Phương pháp</a>
+        <a href="#teacher">Về thầy Tuyên</a>
+        <a href="#faq">FAQ</a>
+        <a href="#top">Chính sách bảo mật</a>
+        <a href="#top">Điều khoản sử dụng</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="#" data-contact="phone" data-location="footer">0906 254 982</a>
+        <a href="#" data-contact="zalo" data-location="footer" target="_blank" rel="noopener noreferrer">Zalo</a>
+        <a href="#" data-contact="tiktok" data-location="footer" target="_blank" rel="noopener noreferrer">TikTok @tuyenhoangu</a>
+      </div>
     </footer>
 
-    <button class="back-to-top magnetic" type="button" aria-label="Lên đầu trang">↑</button>
     <script src="script.js"></script>
   </body>
 </html>

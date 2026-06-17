@@ -1,0 +1,14 @@
+{
+  "name": "Tuyên Hoa Ngữ",
+  "short_name": "Tuyên Hoa Ngữ",
+  "icons": [
+    {
+      "src": "brand/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0B56A0",
+  "background_color": "#F8FBFF",
+  "display": "standalone"
+}

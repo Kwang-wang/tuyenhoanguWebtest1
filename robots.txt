@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kwang-wang.github.io/tuyenhoanguWebtest1/sitemap.xml
