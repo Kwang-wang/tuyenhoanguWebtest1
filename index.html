@@ -53,7 +53,7 @@
             "affiliation": { "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization" },
             "jobTitle": "Giảng viên tiếng Trung giao tiếp và tiếng Trung công việc",
             "alumniOf": "Đại học Hoa Kiều Phúc Kiến",
-            "image": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/thay-tuyen-portrait.webp"
+            "image": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/thay-tuyen-transparent.png"
           },
           {
             "@type": "Course",
@@ -98,7 +98,7 @@
         <a href="#faq">FAQ</a>
       </nav>
 
-      <a class="btn btn-primary btn-small" href="#" data-contact="zalo" data-location="header" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-primary btn-small" href="#contact-options" data-consultation-cta data-interest="general">
         Nhận tư vấn
       </a>
 
@@ -122,7 +122,7 @@
           <a href="#teacher">Về thầy Tuyên</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a class="btn btn-primary" href="#" data-contact="zalo" data-location="mobile_menu" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-primary" href="#contact-options" data-consultation-cta data-interest="general">
           Nhận tư vấn
         </a>
       </div>
@@ -132,7 +132,7 @@
       <section class="hero section-shell">
         <div class="hero__content reveal">
           <p class="eyebrow">Tiếng Trung ứng dụng cho người bận rộn và người đi làm</p>
-          <h1>Học tiếng Trung để nghe hiểu, nói đúng và dùng được trong công việc.</h1>
+          <h1>Học tiếng Trung là để dùng được trong thực tế và công việc!</h1>
           <p class="hero__lead">
             Tuyên Hoa Ngữ giúp người mới, người bận rộn và người đi làm học tiếng Trung theo tình huống thật — từ giao tiếp đời sống đến công xưởng, văn phòng và thương mại.
           </p>
@@ -142,7 +142,7 @@
             <li>Phản xạ trong giao tiếp và xử lý công việc.</li>
           </ul>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="hero" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-primary" href="#contact-options" data-consultation-cta data-interest="general">
               Nhận tư vấn lộ trình
               <span aria-hidden="true">→</span>
             </a>
@@ -152,10 +152,11 @@
 
         <div class="hero__media reveal">
           <div class="teacher-frame">
+            <!-- Approved transparent portrait supplied by the website owner. -->
             <img
-              src="brand/thay-tuyen-portrait.webp"
-              width="520"
-              height="760"
+              src="brand/thay-tuyen-transparent.png"
+              width="1615"
+              height="1845"
               alt="Thầy Tuyên – giảng viên tiếng Trung giao tiếp và tiếng Trung công việc"
               fetchpriority="high"
             />
@@ -237,7 +238,7 @@
               <span>Học phí mua sớm hiện tại</span>
               <strong>659.000đ</strong>
             </div>
-            <a class="btn btn-secondary" href="#" data-contact="zalo" data-location="course_communication" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-secondary" href="#contact-options" data-consultation-cta data-interest="communication">
               Tìm hiểu khóa giao tiếp
             </a>
           </article>
@@ -258,7 +259,7 @@
               <span>Học phí mua sớm hiện tại</span>
               <strong>789.000đ</strong>
             </div>
-            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="course_work" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-primary" href="#contact-options" data-consultation-cta data-interest="work">
               Tìm hiểu khóa công việc
             </a>
           </article>
@@ -316,18 +317,36 @@
             <p>Đặt hàng, thay đổi đơn hàng, phản hồi chất lượng, xử lý khiếu nại, đàm phán, hợp đồng và điều khoản.</p>
           </article>
         </div>
-        <a class="btn btn-secondary pathway-cta" href="#" data-contact="zalo" data-location="pathway" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-secondary pathway-cta" href="#pathway-details">
           Xem lộ trình bài học chi tiết
         </a>
+        <div class="pathway-details" id="pathway-details">
+          <details>
+            <summary>Giao tiếp đời sống</summary>
+            <p>Chào hỏi, giới thiệu bản thân, hỏi đường, mua sắm, đặt lịch, gọi điện và xử lý các tình huống thường ngày.</p>
+          </details>
+          <details>
+            <summary>Công xưởng và sản xuất</summary>
+            <p>Nhận việc, bàn giao, an toàn lao động, lỗi phát sinh, dụng cụ, vật tư, tiến độ, giao nhiệm vụ và xác nhận deadline.</p>
+          </details>
+          <details>
+            <summary>Văn phòng và hành chính</summary>
+            <p>Xin gửi tài liệu, email công việc, họp tuần, lịch hẹn, tuyển dụng, chính sách nội bộ, hóa đơn và công nợ.</p>
+          </details>
+          <details>
+            <summary>Thương mại và đàm phán</summary>
+            <p>Đặt hàng, thay đổi đơn hàng, phản hồi chất lượng, xử lý khiếu nại, đàm phán, hợp đồng và điều khoản.</p>
+          </details>
+        </div>
       </section>
 
       <section id="teacher" class="teacher-section section-shell">
         <div class="teacher-card reveal">
           <div class="teacher-photo">
             <img
-              src="brand/thay-tuyen-portrait.webp"
-              width="520"
-              height="760"
+              src="brand/thay-tuyen-transparent.png"
+              width="1615"
+              height="1845"
               alt="Thầy Tuyên – người trực tiếp xây dựng lộ trình và sửa bài"
               loading="lazy"
             />
@@ -348,18 +367,39 @@
         </div>
       </section>
 
-      <section class="final-cta section-shell">
-        <div class="final-cta__content reveal">
+      <section class="contact-options section-shell" id="contact-options">
+        <div class="contact-options__content reveal">
           <p class="eyebrow">Tư vấn lộ trình</p>
-          <h2>Chưa chắc nên bắt đầu từ khóa nào?</h2>
+          <h2>Chọn cách liên hệ thuận tiện với bạn</h2>
           <p>
-            Hãy cho Tuyên Hoa Ngữ biết trình độ hiện tại, mục tiêu và thời gian bạn có thể học. Bạn sẽ được gợi ý lộ trình phù hợp giữa giao tiếp và tiếng Trung công việc.
+            Hãy cho Tuyên Hoa Ngữ biết trình độ hiện tại, mục tiêu học và thời gian bạn có thể dành mỗi ngày. Bạn sẽ được gợi ý lộ trình phù hợp giữa giao tiếp và tiếng Trung công việc.
           </p>
-          <div class="final-cta__actions">
-            <a class="btn btn-primary" href="#" data-contact="zalo" data-location="final_cta" target="_blank" rel="noopener noreferrer">
-              Nhắn Zalo để được tư vấn
-            </a>
-            <a class="btn btn-secondary" href="#" data-contact="phone" data-location="final_cta">Gọi 0906 254 982</a>
+          <p class="interest-note" data-interest-note aria-live="polite"></p>
+          <div class="contact-option-grid">
+            <article class="contact-option-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
+              <h3>Nhắn qua Zalo</h3>
+              <p>Phù hợp khi cần trao đổi nhanh về khóa học và lộ trình.</p>
+              <a class="btn btn-primary" href="#contact-options" data-contact="zalo" data-location="contact_options">Mở Zalo</a>
+            </article>
+            <article class="contact-option-card is-disabled" data-requires-contact="messenger">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6" /><path d="M8 13l3-3 2 2 3-3" /></svg>
+              <h3>Nhắn qua Messenger</h3>
+              <p>Trao đổi trực tiếp với Tuyên Hoa Ngữ trên Facebook.</p>
+              <span class="btn btn-secondary" aria-disabled="true">Đang cập nhật</span>
+            </article>
+            <article class="contact-option-card is-disabled" data-requires-contact="facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h3V4h-3a5 5 0 0 0-5 5v3H7v4h3v4h4v-4h3l1-4h-4V9a1 1 0 0 1 1-1z" /></svg>
+              <h3>Xem Fanpage</h3>
+              <p>Theo dõi bài học, livestream và các nội dung mới.</p>
+              <span class="btn btn-secondary" aria-disabled="true">Đang cập nhật</span>
+            </article>
+            <article class="contact-option-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
+              <h3>Gọi điện tư vấn</h3>
+              <p>Trao đổi trực tiếp khi bạn cần được tư vấn rõ hơn.</p>
+              <a class="btn btn-secondary" href="#contact-options" data-contact="phone" data-location="contact_options">Gọi 0906 254 982</a>
+            </article>
           </div>
         </div>
       </section>
@@ -433,33 +473,29 @@
         Tư vấn
       </button>
       <div class="contact-dock__panel" id="contact-panel" hidden>
-        <a href="#" data-contact="zalo" data-location="floating_contact" target="_blank" rel="noopener noreferrer">
+        <a href="#contact-options" data-contact="zalo" data-location="floating_contact">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
           Zalo
         </a>
-        <a href="#" data-contact="phone" data-location="floating_contact">
+        <a href="#contact-options" data-contact="phone" data-location="floating_contact">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
           Gọi điện
-        </a>
-        <a href="#" data-contact="tiktok" data-location="floating_contact" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v9a4 4 0 1 1-4-4" /><path d="M14 4c1 3 3 5 6 5" /></svg>
-          TikTok
         </a>
       </div>
     </aside>
 
     <nav class="mobile-contact-bar" aria-label="Liên hệ nhanh trên di động">
-      <a href="#" data-contact="zalo" data-location="mobile_contact" target="_blank" rel="noopener noreferrer">
+      <a href="#contact-options" data-contact="zalo" data-location="mobile_contact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
         Zalo
       </a>
-      <a href="#" data-contact="phone" data-location="mobile_contact">
+      <a href="#contact-options" data-contact="phone" data-location="mobile_contact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
         Gọi
       </a>
-      <a href="#contact-more">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14" /></svg>
-        Thêm
+      <a href="#contact-options" data-consultation-cta data-interest="general">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+        Tư vấn
       </a>
     </nav>
 
@@ -480,9 +516,9 @@
         <a href="#top">Điều khoản sử dụng</a>
       </nav>
       <div class="footer-contact">
-        <a href="#" data-contact="phone" data-location="footer">0906 254 982</a>
-        <a href="#" data-contact="zalo" data-location="footer" target="_blank" rel="noopener noreferrer">Zalo</a>
-        <a href="#" data-contact="tiktok" data-location="footer" target="_blank" rel="noopener noreferrer">TikTok @tuyenhoangu</a>
+        <a href="#contact-options" data-contact="phone" data-location="footer">0906 254 982</a>
+        <a href="#contact-options" data-contact="zalo" data-location="footer">Zalo</a>
+        <a href="#contact-options" data-social="tiktok">TikTok @tuyenhoangu</a>
       </div>
     </footer>
 
