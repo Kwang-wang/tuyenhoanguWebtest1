@@ -353,12 +353,17 @@ h1 {
   text-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
 }
 
-.hero-title span {
+.hero-title > span {
   display: block;
 }
 
 .hero-title__base {
   color: rgba(255, 255, 255, 0.94);
+}
+
+.hero-title__part,
+.hero-title__dash {
+  display: inline;
 }
 
 .hero-title__highlight {
@@ -1372,10 +1377,18 @@ h3 {
   }
 
   .hero-title {
-    max-width: min(100%, 24rem);
-    font-size: clamp(2.08rem, 8.1vw, 2.36rem);
+    max-width: min(100%, 22rem);
+    font-size: clamp(2rem, 7.6vw, 2.22rem);
     line-height: 1.1;
-    letter-spacing: -0.026em;
+    letter-spacing: -0.018em;
+  }
+
+  .hero-title__part {
+    display: block;
+  }
+
+  .hero-title__dash {
+    display: none;
   }
 
   .hero-title__base,
