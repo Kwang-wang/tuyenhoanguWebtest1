@@ -559,7 +559,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  padding-block: 24px clamp(60px, 7vw, 84px);
+  padding-block: 24px clamp(26px, 4vw, 44px);
 }
 
 .proof-strip article,
@@ -613,6 +613,27 @@ h3 {
   color: var(--color-body);
 }
 
+.course-subheadline {
+  max-width: 980px;
+  margin: -6px 0 28px;
+  padding: clamp(18px, 3vw, 26px);
+  color: var(--color-heading);
+  background:
+    linear-gradient(135deg, rgba(218, 243, 233, 0.92), rgba(255, 241, 227, 0.82)),
+    #fff;
+  border: 1px solid rgba(34, 167, 123, 0.22);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 50px rgba(4, 61, 48, 0.08);
+  font-size: clamp(1.12rem, 1.8vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.course-subheadline strong {
+  color: var(--color-accent-orange);
+  font-weight: 800;
+}
+
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -653,6 +674,10 @@ h3 {
   background: #fff;
   box-shadow: 0 0 0 100vmax #fff;
   clip-path: inset(0 -100vmax);
+}
+
+.courses-section {
+  padding-top: clamp(34px, 5vw, 58px);
 }
 
 .course-grid {
@@ -736,6 +761,115 @@ h3 {
   width: fit-content;
 }
 
+.combo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: center;
+  margin-top: 24px;
+  padding: clamp(24px, 4.2vw, 44px);
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255, 184, 107, 0.26), transparent 24%),
+    linear-gradient(135deg, #064536 0%, #0b805e 58%, #0a6b52 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 26px 70px rgba(4, 61, 48, 0.2);
+}
+
+.combo-card::before {
+  position: absolute;
+  inset: -40% auto auto -10%;
+  width: 360px;
+  height: 360px;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.14) 0 1px,
+    transparent 1px 18px
+  );
+  content: "";
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.combo-card__copy,
+.combo-card__deal {
+  position: relative;
+  z-index: 1;
+}
+
+.combo-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  color: #063d31;
+  background: #ffcf7a;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.combo-card h3 {
+  max-width: 720px;
+  color: #fff;
+  font-size: clamp(1.85rem, 3vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.combo-card p {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.combo-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.combo-card li::marker {
+  color: #ffcf7a;
+}
+
+.combo-card__deal {
+  display: grid;
+  justify-items: center;
+  padding: clamp(20px, 3vw, 30px);
+  color: var(--color-heading);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 22px 56px rgba(3, 42, 32, 0.22);
+}
+
+.combo-card__deal span {
+  color: var(--color-accent-orange);
+  font-weight: 800;
+}
+
+.combo-card__deal strong {
+  margin-top: 2px;
+  color: var(--color-accent-orange);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.96;
+}
+
+.combo-card__deal small {
+  margin: 8px 0 18px;
+  color: var(--color-primary-800);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .method-grid,
 .pathway-grid {
   display: grid;
@@ -774,9 +908,15 @@ h3 {
 
 .pathway-section {
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary-900), var(--color-primary-800));
-  box-shadow: 0 0 0 100vmax var(--color-primary-900);
-  clip-path: inset(0 -100vmax);
+  width: 100%;
+  padding-inline: max(20px, calc((100vw - var(--container)) / 2));
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 184, 107, 0.16), transparent 22%),
+    linear-gradient(135deg, #043d30 0%, #075f49 48%, #087a5d 100%);
+}
+
+.pathway-section.section-shell {
+  width: 100%;
 }
 
 .pathway-section h2,
@@ -793,8 +933,9 @@ h3 {
 }
 
 .pathway-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .pathway-card h3,
@@ -1224,6 +1365,15 @@ h3 {
   .contact-option-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .combo-card {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-card__deal {
+    justify-items: start;
+    text-align: left;
+  }
 }
 
 @media (max-width: 820px) {
@@ -1315,6 +1465,30 @@ h3 {
   .contact-option-grid,
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .course-subheadline {
+    margin-top: -4px;
+    margin-bottom: 20px;
+    padding: 18px;
+    font-size: 1.04rem;
+  }
+
+  .combo-card {
+    margin-top: 18px;
+    padding: 20px;
+  }
+
+  .combo-card h3 {
+    font-size: clamp(1.55rem, 8vw, 2.15rem);
+  }
+
+  .combo-card__deal {
+    justify-items: stretch;
+  }
+
+  .combo-card__deal .btn {
+    width: 100%;
   }
 
   .proof-strip {
