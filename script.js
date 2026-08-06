@@ -192,3 +192,25 @@ document.querySelectorAll("[data-social]").forEach((link) => {
     link.rel = "noopener noreferrer";
   }
 });
+
+document.querySelectorAll("[data-feedback-slider]").forEach((slider) => {
+  const track = slider.querySelector(".feedback-track");
+  const previousButton = slider.querySelector("[data-feedback-prev]");
+  const nextButton = slider.querySelector("[data-feedback-next]");
+
+  if (!track) return;
+
+  function scrollFeedback(direction) {
+    const card = track.querySelector(".feedback-card");
+    const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 18;
+    const cardWidth = card?.getBoundingClientRect().width || 320;
+
+    track.scrollBy({
+      left: direction * (cardWidth + gap),
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+    });
+  }
+
+  previousButton?.addEventListener("click", () => scrollFeedback(-1));
+  nextButton?.addEventListener("click", () => scrollFeedback(1));
+});
