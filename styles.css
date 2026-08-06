@@ -274,6 +274,10 @@ a {
 
 .hero .eyebrow {
   color: #ffb86b;
+  margin-bottom: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(0.92rem, 1vw, 1.08rem);
+  letter-spacing: 0.045em;
+  text-shadow: 0 6px 24px rgba(244, 122, 0, 0.28);
 }
 
 .hero .btn-primary {
@@ -336,14 +340,14 @@ h1 {
 
 .hero-title {
   display: grid;
-  gap: 0.04em;
-  max-width: 1120px;
+  gap: 0.03em;
+  max-width: 1180px;
   margin-inline: auto;
   color: #fff;
-  font-size: clamp(4rem, 6.25vw, 6.85rem);
+  font-size: clamp(4.25rem, 6.9vw, 7.5rem);
   font-weight: 800;
-  line-height: 0.94;
-  letter-spacing: -0.06em;
+  line-height: 0.91;
+  letter-spacing: -0.058em;
   text-wrap: balance;
   overflow-wrap: normal;
   text-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
@@ -353,8 +357,21 @@ h1 {
   display: block;
 }
 
-.hero-title__muted {
-  color: rgba(255, 255, 255, 0.52);
+.hero-title__base {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.hero-title__highlight {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0 0.08em 0.07em;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 184, 107, 0.24), rgba(255, 255, 255, 0)) bottom / 100% 0.22em no-repeat,
+    linear-gradient(90deg, #ffffff 0%, #fff4d6 42%, #ffb86b 100%);
+  background-clip: padding-box, text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 16px 38px rgba(244, 122, 0, 0.2));
 }
 
 h2 {
@@ -427,11 +444,11 @@ h3 {
 
 .teacher-frame {
   position: absolute;
-  top: clamp(86px, 10vw, 128px);
-  right: clamp(32px, 8vw, 150px);
+  top: clamp(92px, 8.6vw, 120px);
+  right: clamp(26px, 4.8vw, 96px);
   overflow: hidden;
-  width: clamp(138px, 16vw, 238px);
-  height: clamp(106px, 12vw, 178px);
+  width: clamp(128px, 13vw, 196px);
+  height: clamp(98px, 10vw, 150px);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px 999px 36px 999px;
   background:
@@ -450,8 +467,8 @@ h3 {
 .hero-badge {
   position: absolute;
   left: auto;
-  right: clamp(190px, 18vw, 330px);
-  top: clamp(310px, 33vw, 390px);
+  right: clamp(120px, 13vw, 240px);
+  top: clamp(390px, 34vw, 455px);
   display: grid;
   grid-template-columns: auto;
   gap: 2px;
@@ -1229,10 +1246,10 @@ h3 {
   }
 
   .hero-title {
-    max-width: 100%;
-    font-size: clamp(3rem, 12.6vw, 4.2rem);
-    line-height: 0.94;
-    letter-spacing: -0.05em;
+    max-width: 760px;
+    font-size: clamp(3.35rem, 8.8vw, 4.6rem);
+    line-height: 0.96;
+    letter-spacing: -0.048em;
   }
 
   h2 {
@@ -1240,8 +1257,8 @@ h3 {
   }
 
   .hero {
-    min-height: 680px;
-    padding: 72px 14px 88px;
+    min-height: auto;
+    padding: clamp(68px, 11vw, 92px) 14px clamp(76px, 12vw, 98px);
   }
 
   .hero__media {
@@ -1249,19 +1266,11 @@ h3 {
   }
 
   .teacher-frame {
-    top: 72px;
-    right: 18px;
-    width: 94px;
-    height: 72px;
-    opacity: 0.82;
+    display: none;
   }
 
   .hero-badge {
-    left: 22px;
-    top: 122px;
-    width: 72px;
-    height: 58px;
-    opacity: 0.9;
+    display: none;
   }
 
   .hero-orbit {
@@ -1269,11 +1278,7 @@ h3 {
   }
 
   .hero-floating-card--audio {
-    top: 122px;
-    left: auto;
-    right: 92px;
-    width: 52px;
-    height: 52px;
+    display: none;
   }
 
   .hero-floating-card--speak {
@@ -1352,9 +1357,21 @@ h3 {
 
   .hero-title {
     max-width: 100%;
-    font-size: clamp(2.85rem, 11.4vw, 3.35rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
+    font-size: clamp(2.72rem, 10.5vw, 3.18rem);
+    line-height: 1;
+    letter-spacing: -0.042em;
+  }
+
+  .hero .eyebrow {
+    max-width: 23rem;
+    margin-inline: auto;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .hero__lead {
+    font-size: 0.98rem;
+    line-height: 1.62;
   }
 
   .hero-actions {
