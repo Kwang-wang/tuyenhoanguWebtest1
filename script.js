@@ -5,6 +5,9 @@ const contactToggle = document.querySelector(".contact-dock__toggle");
 const contactPanel = document.querySelector(".contact-dock__panel");
 const contactOptions = document.querySelector("#contact-options");
 const interestNote = document.querySelector("[data-interest-note]");
+const feedbackLightbox = document.querySelector("[data-feedback-lightbox]");
+const feedbackLightboxImage = document.querySelector("[data-feedback-lightbox-image]");
+const feedbackLightboxCaption = document.querySelector("[data-feedback-lightbox-caption]");
 
 const contactLinks = window.TUYEN_HOA_NGU_CONTACTS || {};
 
@@ -51,6 +54,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     setMenu(false);
     setContactPanel(false);
+    closeFeedbackLightbox();
   }
 });
 
@@ -193,12 +197,64 @@ document.querySelectorAll("[data-social]").forEach((link) => {
   }
 });
 
+function openFeedbackLightbox(image, caption) {
+  if (!feedbackLightbox || !feedbackLightboxImage || !feedbackLightboxCaption) return;
+
+  feedbackLightboxImage.src = image.currentSrc || image.src;
+  feedbackLightboxImage.alt = image.alt;
+  feedbackLightboxCaption.textContent = caption;
+  feedbackLightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+}
+
+function closeFeedbackLightbox() {
+  if (!feedbackLightbox || !feedbackLightboxImage || !feedbackLightboxCaption) return;
+
+  feedbackLightbox.hidden = true;
+  feedbackLightboxImage.src = "";
+  feedbackLightboxCaption.textContent = "";
+  document.body.classList.remove("lightbox-open");
+}
+
+document.querySelectorAll("[data-feedback-close]").forEach((button) => {
+  button.addEventListener("click", closeFeedbackLightbox);
+});
+
 document.querySelectorAll("[data-feedback-slider]").forEach((slider) => {
   const track = slider.querySelector(".feedback-track");
   const previousButton = slider.querySelector("[data-feedback-prev]");
   const nextButton = slider.querySelector("[data-feedback-next]");
-
   if (!track) return;
+
+  Array.from(track.children).forEach((card) => {
+    card.dataset.feedbackOriginal = "true";
+  });
+
+  const originalCards = Array.from(track.querySelectorAll("[data-feedback-original='true']"));
+  originalCards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.dataset.feedbackClone = "true";
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+  });
+
+  track.querySelectorAll(".feedback-card").forEach((card) => {
+    const image = card.querySelector("img");
+    const name = card.querySelector(".feedback-card__caption strong")?.textContent?.trim() || "Feedback học viên";
+    const detail = card.querySelector(".feedback-card__caption span")?.textContent?.trim() || "";
+    const zoomButton = document.createElement("button");
+
+    zoomButton.className = "feedback-zoom";
+    zoomButton.type = "button";
+    zoomButton.setAttribute("aria-label", `Phóng to feedback của ${name}`);
+    zoomButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M16.5 16.5L21 21" /><path d="M11 8v6" /><path d="M8 11h6" /></svg>';
+    card.appendChild(zoomButton);
+
+    zoomButton.addEventListener("click", () => {
+      if (!image) return;
+      openFeedbackLightbox(image, detail ? `${name} - ${detail}` : name);
+    });
+  });
 
   function scrollFeedback(direction) {
     const card = track.querySelector(".feedback-card");
@@ -213,4 +269,42 @@ document.querySelectorAll("[data-feedback-slider]").forEach((slider) => {
 
   previousButton?.addEventListener("click", () => scrollFeedback(-1));
   nextButton?.addEventListener("click", () => scrollFeedback(1));
+
+  if (prefersReducedMotion() || !originalCards.length) return;
+
+  let paused = false;
+  let autoScrollPosition = track.scrollLeft;
+
+  function originalTrackWidth() {
+    return track.scrollWidth / 2;
+  }
+
+  function moveFeedback() {
+    if (!paused && feedbackLightbox?.hidden !== false) {
+      const width = originalTrackWidth();
+      autoScrollPosition = track.scrollLeft + 0.85;
+
+      if (width && autoScrollPosition >= width) {
+        autoScrollPosition -= width;
+      }
+
+      track.scrollLeft = autoScrollPosition;
+    }
+  }
+
+  slider.addEventListener("mouseenter", () => {
+    paused = true;
+  });
+  slider.addEventListener("mouseleave", () => {
+    paused = false;
+  });
+  slider.addEventListener("focusin", () => {
+    paused = true;
+  });
+  slider.addEventListener("focusout", () => {
+    paused = false;
+  });
+
+  const autoScrollTimer = window.setInterval(moveFeedback, 32);
+  window.addEventListener("pagehide", () => window.clearInterval(autoScrollTimer), { once: true });
 });

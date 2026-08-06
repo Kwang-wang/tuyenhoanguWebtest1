@@ -87,6 +87,7 @@
         <a href="#method">Phương pháp</a>
         <a href="#pathways">Lộ trình</a>
         <a href="#teacher">Về thầy Tuyên</a>
+        <a href="#feedback">Feedback</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -112,6 +113,7 @@
           <a href="#method">Phương pháp</a>
           <a href="#pathways">Lộ trình</a>
           <a href="#teacher">Về thầy Tuyên</a>
+          <a href="#feedback">Feedback</a>
           <a href="#faq">FAQ</a>
         </nav>
         <a class="btn btn-primary" href="#contact-options" data-consultation-cta data-interest="general">
@@ -271,6 +273,9 @@
             </a>
           </div>
         </article>
+        <a class="btn btn-secondary course-feedback-cta reveal" href="#feedback">
+          Xem feedback học viên
+        </a>
       </section>
 
       <section id="method" class="method-section section-shell">
@@ -409,12 +414,8 @@
 
         <div class="feedback-proof reveal" aria-label="Bằng chứng từ học viên">
           <article>
-            <strong>1.000+</strong>
+            <strong>2.000+</strong>
             <span>lượt đăng ký và quan tâm khóa học</span>
-          </article>
-          <article>
-            <strong>100 bài</strong>
-            <span>trong 2 lộ trình giao tiếp và công việc</span>
           </article>
           <article>
             <strong>1:1</strong>
@@ -533,6 +534,15 @@
           </button>
         </div>
       </section>
+
+      <div class="feedback-lightbox" data-feedback-lightbox hidden>
+        <button class="feedback-lightbox__backdrop" type="button" aria-label="Đóng ảnh feedback" data-feedback-close></button>
+        <div class="feedback-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Ảnh feedback phóng to">
+          <button class="feedback-lightbox__close" type="button" aria-label="Đóng ảnh feedback" data-feedback-close>×</button>
+          <img src="" alt="" data-feedback-lightbox-image />
+          <p data-feedback-lightbox-caption></p>
+        </div>
+      </div>
 
       <section class="contact-options section-shell" id="contact-options">
         <div class="contact-options__content reveal">
