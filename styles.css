@@ -453,11 +453,11 @@ h3 {
 
 .teacher-frame {
   position: absolute;
-  top: clamp(98px, 9vw, 128px);
-  right: clamp(18px, 3.4vw, 70px);
+  top: clamp(86px, 7.5vw, 112px);
+  right: clamp(28px, 3vw, 76px);
   overflow: hidden;
-  width: clamp(110px, 11vw, 168px);
-  height: clamp(84px, 8.4vw, 126px);
+  width: clamp(152px, 12vw, 220px);
+  height: clamp(114px, 9.1vw, 166px);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px 999px 36px 999px;
   background:
@@ -476,8 +476,8 @@ h3 {
 .hero-badge {
   position: absolute;
   left: auto;
-  right: clamp(64px, 7vw, 120px);
-  top: clamp(440px, 36vw, 500px);
+  right: clamp(220px, 16vw, 330px);
+  top: clamp(430px, 33vw, 500px);
   display: grid;
   grid-template-columns: auto;
   gap: 2px;
