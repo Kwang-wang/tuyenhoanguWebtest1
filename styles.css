@@ -761,6 +761,18 @@ h3 {
   line-height: 1.1;
 }
 
+.price-box del {
+  display: block;
+  width: fit-content;
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration-color: var(--color-heading);
+  text-decoration-thickness: 2px;
+}
+
 .course-card .btn {
   width: fit-content;
 }
