@@ -1372,10 +1372,16 @@ h3 {
   }
 
   .hero-title {
-    max-width: 100%;
-    font-size: clamp(2.38rem, 9.25vw, 2.78rem);
-    line-height: 1.04;
-    letter-spacing: -0.042em;
+    max-width: min(100%, 24rem);
+    font-size: clamp(2.08rem, 8.1vw, 2.36rem);
+    line-height: 1.1;
+    letter-spacing: -0.026em;
+  }
+
+  .hero-title__base,
+  .hero-title__highlight {
+    max-width: calc(100vw - 34px);
+    margin-inline: auto;
   }
 
   .hero-title__highlight {
