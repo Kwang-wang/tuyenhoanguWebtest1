@@ -33,11 +33,13 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   color: var(--color-body);
   background: var(--color-background);
   font-size: 18px;
@@ -84,7 +86,8 @@ a {
 }
 
 .section-shell {
-  width: min(var(--container), calc(100% - 40px));
+  width: calc(100% - 40px);
+  max-width: var(--container);
   margin-inline: auto;
 }
 
@@ -671,9 +674,10 @@ h3 {
 
 .courses-section,
 .faq-section {
+  width: 100%;
+  max-width: none;
+  padding-inline: max(20px, calc((100vw - var(--container)) / 2));
   background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
 }
 
 .courses-section {
@@ -909,6 +913,7 @@ h3 {
 .pathway-section {
   color: #fff;
   width: 100%;
+  max-width: none;
   padding-inline: max(20px, calc((100vw - var(--container)) / 2));
   background:
     radial-gradient(circle at 82% 18%, rgba(255, 184, 107, 0.16), transparent 22%),
@@ -1361,9 +1366,15 @@ h3 {
   }
 
   .proof-strip,
+  .problem-grid,
+  .method-grid,
   .pathway-grid,
   .contact-option-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
   }
 
   .combo-card {
