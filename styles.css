@@ -1383,12 +1383,14 @@ h3 {
     letter-spacing: -0.018em;
   }
 
-  .hero-title__part {
-    display: block;
+  .hero-title__split {
+    font-size: clamp(1.56rem, 6vw, 1.78rem);
+    white-space: nowrap;
   }
 
+  .hero-title__part,
   .hero-title__dash {
-    display: none;
+    display: inline;
   }
 
   .hero-title__base,
