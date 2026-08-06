@@ -36,15 +36,7 @@
             "@id": "https://kwang-wang.github.io/tuyenhoanguWebtest1/#organization",
             "name": "Tuyên Hoa Ngữ",
             "url": "https://kwang-wang.github.io/tuyenhoanguWebtest1/",
-            "logo": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/tuyen-hoa-ngu-logo.webp",
-            "sameAs": ["https://www.tiktok.com/@tuyenhoangu"],
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+84906254982",
-              "contactType": "customer support",
-              "areaServed": "VN",
-              "availableLanguage": ["vi", "zh"]
-            }
+            "logo": "https://kwang-wang.github.io/tuyenhoanguWebtest1/brand/tuyen-hoa-ngu-logo.webp"
           },
           {
             "@type": "Person",
@@ -419,23 +411,23 @@
               <p>Phù hợp khi cần trao đổi nhanh về khóa học và lộ trình.</p>
               <a class="btn btn-primary" href="#contact-options" data-contact="zalo" data-location="contact_options">Mở Zalo</a>
             </article>
-            <article class="contact-option-card is-disabled" data-requires-contact="messenger">
+            <article class="contact-option-card" data-requires-contact="messenger">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6" /><path d="M8 13l3-3 2 2 3-3" /></svg>
               <h3>Nhắn qua Messenger</h3>
               <p>Trao đổi trực tiếp với Tuyên Hoa Ngữ trên Facebook.</p>
-              <span class="btn btn-secondary" aria-disabled="true">Đang cập nhật</span>
+              <a class="btn btn-secondary" href="#contact-options" data-contact="messenger" data-location="contact_options">Mở Messenger</a>
             </article>
-            <article class="contact-option-card is-disabled" data-requires-contact="facebook">
+            <article class="contact-option-card" data-requires-contact="facebook">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h3V4h-3a5 5 0 0 0-5 5v3H7v4h3v4h4v-4h3l1-4h-4V9a1 1 0 0 1 1-1z" /></svg>
               <h3>Xem Fanpage</h3>
               <p>Theo dõi bài học, livestream và các nội dung mới.</p>
-              <span class="btn btn-secondary" aria-disabled="true">Đang cập nhật</span>
+              <a class="btn btn-secondary" href="#contact-options" data-social="facebook" data-location="contact_options">Mở Fanpage</a>
             </article>
             <article class="contact-option-card">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
               <h3>Gọi điện tư vấn</h3>
               <p>Trao đổi trực tiếp khi bạn cần được tư vấn rõ hơn.</p>
-              <a class="btn btn-secondary" href="#contact-options" data-contact="phone" data-location="contact_options">Gọi 0906 254 982</a>
+              <a class="btn btn-secondary" href="#contact-options" data-contact="phone" data-contact-label="phone" data-contact-prefix="Gọi" data-location="contact_options">Gọi điện</a>
             </article>
           </div>
         </div>
@@ -553,12 +545,14 @@
         <a href="#top">Điều khoản sử dụng</a>
       </nav>
       <div class="footer-contact">
-        <a href="#contact-options" data-contact="phone" data-location="footer">0906 254 982</a>
+        <a href="#contact-options" data-contact="phone" data-contact-label="phone" data-location="footer">Số điện thoại</a>
         <a href="#contact-options" data-contact="zalo" data-location="footer">Zalo</a>
-        <a href="#contact-options" data-social="tiktok">TikTok @tuyenhoangu</a>
+        <a href="#contact-options" data-social="facebook">Fanpage</a>
+        <a href="#contact-options" data-social="tiktok" data-social-label="tiktok">TikTok @tuyenhoangu</a>
       </div>
     </footer>
 
+    <script src="contact-config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

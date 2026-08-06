@@ -6,32 +6,7 @@ const contactPanel = document.querySelector(".contact-dock__panel");
 const contactOptions = document.querySelector("#contact-options");
 const interestNote = document.querySelector("[data-interest-note]");
 
-const contactLinks = {
-  phone: {
-    href: "tel:+84906254982",
-    enabled: true,
-  },
-  zalo: {
-    href: "https://zalo.me/0906254982",
-    external: true,
-    enabled: true,
-  },
-  messenger: {
-    href: "",
-    external: true,
-    enabled: false,
-  },
-  facebook: {
-    href: "",
-    external: true,
-    enabled: false,
-  },
-  tiktok: {
-    href: "https://www.tiktok.com/@tuyenhoangu",
-    external: true,
-    enabled: true,
-  },
-};
+const contactLinks = window.TUYEN_HOA_NGU_CONTACTS || {};
 
 const interestLabels = {
   general: "",
@@ -154,8 +129,10 @@ document.querySelectorAll("[data-consultation-cta]").forEach((link) => {
 document.querySelectorAll("[data-contact]").forEach((link) => {
   const channel = link.dataset.contact;
   const config = contactLinks[channel];
+  const card = link.closest("[data-requires-contact]");
 
   if (!config?.enabled || !config.href) {
+    card?.classList.add("is-disabled");
     link.setAttribute("aria-disabled", "true");
     link.removeAttribute("target");
     link.removeAttribute("rel");
@@ -163,7 +140,17 @@ document.querySelectorAll("[data-contact]").forEach((link) => {
     return;
   }
 
+  card?.classList.remove("is-disabled");
+  link.removeAttribute("aria-disabled");
   link.href = config.href;
+  if (link.dataset.contactLabel === "phone" && config.display) {
+    link.textContent = link.dataset.contactPrefix
+      ? `${link.dataset.contactPrefix} ${config.display}`
+      : config.display;
+  } else if (link.dataset.contactLabel && config.display) {
+    link.textContent = config.display;
+  }
+
   if (config.external) {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
@@ -184,14 +171,22 @@ document.querySelectorAll("[data-contact]").forEach((link) => {
 
 document.querySelectorAll("[data-social]").forEach((link) => {
   const config = contactLinks[link.dataset.social];
+  const card = link.closest("[data-requires-contact]");
 
   if (!config?.enabled || !config.href) {
+    card?.classList.add("is-disabled");
     link.setAttribute("aria-disabled", "true");
     link.addEventListener("click", (event) => event.preventDefault());
     return;
   }
 
+  card?.classList.remove("is-disabled");
+  link.removeAttribute("aria-disabled");
   link.href = config.href;
+  if (link.dataset.socialLabel && config.display) {
+    link.textContent = config.display;
+  }
+
   if (config.external) {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
