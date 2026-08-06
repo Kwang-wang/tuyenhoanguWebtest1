@@ -1115,6 +1115,19 @@ h3 {
   margin-top: auto;
 }
 
+.contact-option-card .btn-secondary {
+  color: var(--color-primary-800);
+  background: #fff;
+  border-color: var(--color-border);
+}
+
+.contact-option-card .btn-secondary:hover,
+.contact-option-card .btn-secondary:focus-visible {
+  color: #fff;
+  background: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+
 .faq-list {
   display: grid;
   gap: 12px;
