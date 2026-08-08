@@ -44,6 +44,7 @@ function setContactPanel(open) {
   if (!contactToggle || !contactPanel) return;
   contactToggle.setAttribute("aria-expanded", String(open));
   contactPanel.hidden = !open;
+  contactPanel.classList.toggle("is-open", open);
 }
 
 contactToggle?.addEventListener("click", () => {
