@@ -862,12 +862,12 @@ h3 {
 }
 
 .course-details-hero h1 {
-  max-width: 920px;
+  max-width: 1040px;
   margin: 0;
   color: var(--color-heading);
-  font-size: clamp(2.35rem, 5vw, 4.7rem);
-  line-height: 0.98;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.25rem, 4.4vw, 4.15rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
 }
 
 .course-details-hero > p:not(.eyebrow) {
@@ -889,11 +889,15 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
   padding-bottom: clamp(56px, 7vw, 92px);
 }
 
 .route-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 760px;
+  height: clamp(880px, calc(100vh + 160px), 1220px);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--color-border);
@@ -963,8 +967,9 @@ h3 {
 
 .route-scroll {
   display: grid;
+  flex: 1;
   gap: 16px;
-  max-height: calc(100vh - 150px);
+  min-height: 0;
   padding: 18px clamp(18px, 2.6vw, 28px) clamp(22px, 3vw, 32px);
   overflow: auto;
   overscroll-behavior: contain;
@@ -2153,7 +2158,7 @@ h3 {
 }
 
 .faq-answer {
-  padding: 0 22px 20px;
+  padding: 12px 22px 22px;
   color: var(--color-body);
 }
 
@@ -2273,24 +2278,59 @@ h3 {
 }
 
 .site-footer {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(240px, 1.2fr) 1fr minmax(180px, 0.8fr);
   gap: 28px;
   padding: clamp(34px, 5vw, 52px) max(20px, calc((100vw - var(--container)) / 2));
-  color: var(--color-body);
-  background: #fff;
-  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.82);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 184, 77, 0.2), transparent 30%),
+    radial-gradient(circle at 85% 35%, rgba(34, 167, 123, 0.28), transparent 32%),
+    linear-gradient(135deg, #05382f 0%, #075e4b 48%, #04342b 100%);
+  border-top: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.site-footer::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  opacity: 0.35;
+}
+
+.site-footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-brand {
   display: flex;
   gap: 14px;
   align-items: center;
+  align-self: start;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(214, 249, 234, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.16);
 }
 
 .footer-brand strong {
   display: block;
-  color: var(--color-heading);
+  color: #fff;
+}
+
+.site-footer p,
+.site-footer span {
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .site-footer nav,
@@ -2300,8 +2340,17 @@ h3 {
 }
 
 .site-footer a {
-  color: var(--color-primary-800);
+  color: #fff;
   font-weight: 600;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--color-accent);
+  transform: translateX(3px);
 }
 
 .reveal {
@@ -2436,6 +2485,11 @@ h3 {
 
   .course-details-layout {
     grid-template-columns: 1fr;
+  }
+
+  .route-panel {
+    height: auto;
+    min-height: 0;
   }
 
   .route-scroll {
