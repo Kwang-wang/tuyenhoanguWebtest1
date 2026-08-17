@@ -934,8 +934,8 @@ h3 {
 .route-panel {
   display: flex;
   flex-direction: column;
-  min-height: 760px;
-  height: clamp(880px, calc(100vh + 160px), 1220px);
+  min-height: 620px;
+  height: clamp(680px, calc(100vh - 128px), 880px);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--color-border);
@@ -982,6 +982,11 @@ h3 {
   padding: 18px clamp(22px, 3vw, 34px) 0;
 }
 
+.route-scroll > .route-meta-grid {
+  margin-bottom: 16px;
+  padding: 0;
+}
+
 .route-meta-grid article {
   padding: 14px;
   background: rgba(255, 255, 255, 0.72);
@@ -1004,14 +1009,18 @@ h3 {
 }
 
 .route-scroll {
-  display: grid;
+  display: block;
   flex: 1;
-  gap: 16px;
   min-height: 0;
   padding: 18px clamp(18px, 2.6vw, 28px) clamp(22px, 3vw, 32px);
   overflow: auto;
   overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   scrollbar-color: rgba(11, 128, 94, 0.45) rgba(11, 128, 94, 0.08);
+}
+
+.route-scroll .route-section + .route-section {
+  margin-top: 16px;
 }
 
 .route-section {
@@ -1037,25 +1046,6 @@ h3 {
 
 .route-panel--communication .route-section summary {
   background: linear-gradient(135deg, #075e4b, #ff8c1a);
-}
-
-@media (min-width: 1121px) {
-  .route-panel--communication .route-scroll {
-    align-content: stretch;
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-
-  .route-panel--communication .route-section {
-    display: flex;
-    min-height: 0;
-    flex-direction: column;
-  }
-
-  .route-panel--communication .route-section__body {
-    flex: 1;
-    overflow: auto;
-    scrollbar-color: rgba(255, 126, 27, 0.45) rgba(255, 126, 27, 0.08);
-  }
 }
 
 .route-section summary::-webkit-details-marker {
