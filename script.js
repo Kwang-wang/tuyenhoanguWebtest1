@@ -127,7 +127,13 @@ document.querySelectorAll("[data-consultation-cta]").forEach((link) => {
     event.preventDefault();
     currentInterest = link.dataset.interest || "general";
     updateInterestNote(currentInterest);
-    scrollToContactOptions();
+    if (contactOptions) {
+      scrollToContactOptions();
+      return;
+    }
+
+    setContactPanel(true);
+    contactToggle?.focus({ preventScroll: true });
   });
 });
 

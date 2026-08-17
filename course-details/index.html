@@ -21,9 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260817-3" />
+    <link rel="stylesheet" href="/styles.css?v=20260817-4" />
   </head>
-  <body class="course-details-page">
+  <body id="course-top" class="course-details-page">
     <header class="site-header">
       <a class="brand" href="/">
         <img src="/brand/tuyen-hoa-ngu-logo.webp" alt="Logo Tuyên Hoa Ngữ" width="52" height="52" />
@@ -35,7 +35,7 @@
         <a href="/#teacher">Về thầy Tuyên</a>
         <a href="/#feedback">Feedback</a>
       </nav>
-      <a class="btn btn-primary btn-small" href="/#contact-options">Nhận tư vấn</a>
+      <a class="btn btn-primary btn-small" href="/#contact-options" data-consultation-cta data-interest="general">Nhận tư vấn</a>
       <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -78,6 +78,11 @@
           <div class="route-panel__head">
             <h2>Tiếng Trung giao tiếp không căng não</h2>
             <p>Lộ trình các bài học của khoá học tiếng Trung giao tiếp không căng não - Tuyên Hoa Ngữ</p>
+            <div class="route-panel__actions">
+              <a class="btn btn-secondary" href="/#contact-options" data-consultation-cta data-interest="communication">
+                Nhận tư vấn khóa giao tiếp
+              </a>
+            </div>
           </div>
 
           <div class="route-scroll">
@@ -173,6 +178,11 @@
           <div class="route-panel__head">
             <h2>Tiếng Trung công việc thực chiến</h2>
             <p>Cấu trúc khóa học bao gồm 2 phần chính: Phần I là giai đoạn nền tảng (28 bài) và Phần II là 03 nhóm bài học chuyên sâu giúp học viên làm chủ mọi tình huống giao tiếp từ nhà xưởng đến văn phòng và đàm phán thương mại.</p>
+            <div class="route-panel__actions">
+              <a class="btn btn-primary" href="/#contact-options" data-consultation-cta data-interest="work">
+                Nhận tư vấn khóa công việc
+              </a>
+            </div>
           </div>
 
           <div class="route-scroll">
@@ -284,6 +294,35 @@
         </article>
       </section>
     </main>
+
+    <a class="back-to-top-button" href="#course-top" aria-label="Trở về đầu trang">
+      <span aria-hidden="true">↑</span>
+      Đầu trang
+    </a>
+
+    <aside class="contact-dock" aria-label="Kênh tư vấn nhanh">
+      <button class="contact-dock__toggle" type="button" aria-expanded="false" aria-controls="contact-panel">
+        Tư vấn
+      </button>
+      <div class="contact-dock__panel" id="contact-panel" hidden>
+        <a href="/#contact-options" data-contact="zalo" data-location="course_details_floating_contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" /></svg>
+          Zalo
+        </a>
+        <a href="/#contact-options" data-contact="messenger" data-location="course_details_floating_contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6" /><path d="M8 13l3-3 2 2 3-3" /></svg>
+          Messenger
+        </a>
+        <a href="/#contact-options" data-social="facebook" data-location="course_details_floating_contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h3V4h-3a5 5 0 0 0-5 5v3H7v4h3v4h4v-4h3l1-4h-4V9a1 1 0 0 1 1-1z" /></svg>
+          Fanpage
+        </a>
+        <a href="/#contact-options" data-contact="phone" data-location="course_details_floating_contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l4 2-2 4c1 2 3 4 5 5l4-2 2 4c-1 2-3 3-5 3C8 20 4 16 4 10c0-2 1-4 2-6z" /></svg>
+          Gọi điện
+        </a>
+      </div>
+    </aside>
 
     <footer class="site-footer" id="contact-more">
       <div class="footer-brand">
