@@ -82,7 +82,9 @@ a {
 #faq,
 #contact-more,
 #contact-options,
-#pathway-details {
+#pathway-details,
+#communication-course,
+#work-course {
   scroll-margin-top: 96px;
 }
 
@@ -727,9 +729,9 @@ h3 {
 }
 
 .courses-section .section-heading h2 {
-  max-width: 980px;
-  font-size: clamp(2.15rem, 3.15vw, 3.25rem);
-  line-height: 1.12;
+  max-width: 900px;
+  font-size: clamp(1.9rem, 2.65vw, 2.75rem);
+  line-height: 1.18;
 }
 
 .course-grid {
@@ -861,12 +863,48 @@ h3 {
   padding-block: clamp(48px, 7vw, 82px) 28px;
 }
 
+.course-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-bottom: 22px;
+  padding: 0 16px;
+  color: var(--color-primary-800);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(34, 167, 123, 0.24);
+  border-radius: 999px;
+  box-shadow: 0 14px 36px rgba(4, 61, 48, 0.08);
+  font-size: 0.92rem;
+  font-weight: 800;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.course-back-link span {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: 1.16rem;
+  line-height: 1;
+}
+
+.course-back-link:hover,
+.course-back-link:focus-visible {
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(4, 61, 48, 0.13);
+  transform: translateX(-3px);
+}
+
 .course-details-hero h1 {
-  max-width: 1040px;
+  max-width: 760px;
   margin: 0;
   color: var(--color-heading);
-  font-size: clamp(2.25rem, 4.4vw, 4.15rem);
-  line-height: 1.04;
+  font-size: clamp(2.05rem, 3.35vw, 3.15rem);
+  line-height: 1.1;
   letter-spacing: -0.015em;
 }
 
@@ -999,6 +1037,25 @@ h3 {
 
 .route-panel--communication .route-section summary {
   background: linear-gradient(135deg, #075e4b, #ff8c1a);
+}
+
+@media (min-width: 1121px) {
+  .route-panel--communication .route-scroll {
+    align-content: stretch;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .route-panel--communication .route-section {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .route-panel--communication .route-section__body {
+    flex: 1;
+    overflow: auto;
+    scrollbar-color: rgba(255, 126, 27, 0.45) rgba(255, 126, 27, 0.08);
+  }
 }
 
 .route-section summary::-webkit-details-marker {
@@ -2158,7 +2215,7 @@ h3 {
 }
 
 .faq-answer {
-  padding: 12px 22px 22px;
+  padding: 22px 22px 24px;
   color: var(--color-body);
 }
 
@@ -2282,13 +2339,14 @@ h3 {
   display: grid;
   grid-template-columns: minmax(240px, 1.2fr) 1fr minmax(180px, 0.8fr);
   gap: 28px;
-  padding: clamp(34px, 5vw, 52px) max(20px, calc((100vw - var(--container)) / 2));
+  margin-top: 0;
+  padding: clamp(38px, 5vw, 58px) max(20px, calc((100vw - var(--container)) / 2));
   overflow: hidden;
   color: rgba(255, 255, 255, 0.82);
   background:
-    radial-gradient(circle at 12% 0%, rgba(255, 184, 77, 0.2), transparent 30%),
-    radial-gradient(circle at 85% 35%, rgba(34, 167, 123, 0.28), transparent 32%),
-    linear-gradient(135deg, #05382f 0%, #075e4b 48%, #04342b 100%);
+    radial-gradient(circle at 12% 0%, rgba(255, 184, 77, 0.24), transparent 30%),
+    radial-gradient(circle at 85% 35%, rgba(34, 167, 123, 0.34), transparent 32%),
+    linear-gradient(135deg, #032a24 0%, #075e4b 48%, #032820 100%);
   border-top: 0;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
@@ -2574,8 +2632,8 @@ h3 {
   }
 
   .course-details-hero h1 {
-    font-size: clamp(2rem, 10vw, 3rem);
-    line-height: 1.04;
+    font-size: clamp(2rem, 8.8vw, 2.7rem);
+    line-height: 1.1;
   }
 
   .course-details-hero > p:not(.eyebrow) {

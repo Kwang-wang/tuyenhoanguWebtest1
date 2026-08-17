@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260817-1" />
+    <link rel="stylesheet" href="/styles.css?v=20260817-2" />
   </head>
   <body class="course-details-page">
     <header class="site-header">
@@ -58,8 +58,12 @@
 
     <main>
       <section class="course-details-hero section-shell">
+        <a class="course-back-link" href="/" aria-label="Trở về trang chính">
+          <span aria-hidden="true">&lt;</span>
+          Trở về trang chính
+        </a>
         <p class="eyebrow">Chọn lộ trình phù hợp</p>
-        <h1>Hai lộ trình toàn diện chinh phục từ tiếng Trung giao tiếp đời sống đến công việc.</h1>
+        <h1>Chi tiết lộ trình, nội dung bài học</h1>
         <p>
           Dễ học, chủ động hoàn toàn, tiết kiệm chi phí. Ai cũng học được, dù bạn là người mất gốc hay bận rộn đều có thể chinh phục.
         </p>
@@ -281,21 +285,27 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact-more">
       <div class="footer-brand">
-        <img src="/brand/tuyen-hoa-ngu-logo.webp" alt="" width="48" height="48" />
+        <img src="/brand/tuyen-hoa-ngu-logo.webp" width="56" height="56" alt="Logo Tuyên Hoa Ngữ" loading="lazy" />
         <div>
           <strong>Tuyên Hoa Ngữ</strong>
-          <span>Tiếng Trung Giao Tiếp Thực Chiến.</span>
+          <p>Tiếng Trung Giao Tiếp Thực Chiến.</p>
         </div>
       </div>
       <nav aria-label="Liên kết cuối trang">
-        <a href="/">Trang chủ</a>
         <a href="/#courses">Khóa học</a>
-        <a href="/#contact-options">Liên hệ</a>
+        <a href="/#method">Phương pháp</a>
+        <a href="/#teacher">Về thầy Tuyên</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/">Chính sách bảo mật</a>
+        <a href="/">Điều khoản sử dụng</a>
       </nav>
       <div class="footer-contact">
-        <a href="/#contact-options">Nhận tư vấn lộ trình</a>
+        <a href="/#contact-options" data-contact="phone" data-contact-label="phone" data-location="footer">Số điện thoại</a>
+        <a href="/#contact-options" data-contact="zalo" data-location="footer">Zalo</a>
+        <a href="/#contact-options" data-social="facebook">Fanpage</a>
+        <a href="/#contact-options" data-social="tiktok" data-social-label="tiktok">TikTok @tuyenhoangu</a>
       </div>
     </footer>
 
