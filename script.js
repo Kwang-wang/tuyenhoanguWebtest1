@@ -74,18 +74,6 @@ document.querySelectorAll(".faq-question").forEach((button) => {
   });
 });
 
-document.querySelectorAll("[data-course-detail-close]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const detail = button.closest("[data-course-detail]");
-    const summary = detail?.querySelector("summary");
-
-    if (!detail) return;
-
-    detail.open = false;
-    summary?.focus({ preventScroll: true });
-  });
-});
-
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
