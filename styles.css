@@ -963,33 +963,43 @@ h3 {
 }
 
 .route-panel__head {
-  padding: clamp(22px, 3vw, 34px);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 2.4vw, 26px);
   border-bottom: 1px solid var(--color-border);
 }
 
 .route-panel__head h2 {
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   color: var(--color-heading);
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-size: clamp(1.5rem, 2.15vw, 2.18rem);
   line-height: 1.12;
   letter-spacing: -0.015em;
 }
 
 .route-panel__head p {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: var(--color-text);
-  line-height: 1.72;
+  font-size: 0.96rem;
+  line-height: 1.62;
 }
 
 .route-panel__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 14px;
 }
 
 .route-panel__actions .btn {
   margin-top: 0;
+}
+
+@media (min-width: 1121px) {
+  .course-details-layout .route-panel__head {
+    min-height: 266px;
+  }
 }
 
 .route-meta-grid {
