@@ -2529,7 +2529,7 @@ h3 {
 .site-footer {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(240px, 1.2fr) 1fr minmax(180px, 0.8fr);
+  grid-template-columns: minmax(260px, 1.15fr) minmax(170px, 0.65fr) minmax(260px, 0.95fr) minmax(220px, 0.85fr);
   gap: 28px;
   margin-top: 0;
   padding: clamp(38px, 5vw, 58px) max(20px, calc((100vw - var(--container)) / 2));
@@ -2583,10 +2583,23 @@ h3 {
   color: rgba(255, 255, 255, 0.74);
 }
 
-.site-footer nav,
+.footer-link-group,
 .footer-contact {
   display: grid;
+  align-content: start;
   gap: 10px;
+}
+
+.footer-main-links {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(214, 249, 234, 0.18);
+  border-radius: 20px;
+}
+
+.footer-legal-links {
+  padding-left: 8px;
+  border-left: 1px solid rgba(214, 249, 234, 0.16);
 }
 
 .site-footer a {
@@ -2663,6 +2676,14 @@ h3 {
 }
 
 @media (max-width: 1120px) {
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
   .site-header {
     grid-template-columns: auto 1fr auto;
   }
@@ -2998,6 +3019,13 @@ h3 {
   .contact-option-grid,
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .footer-legal-links {
+    padding-top: 14px;
+    padding-left: 0;
+    border-top: 1px solid rgba(214, 249, 234, 0.16);
+    border-left: 0;
   }
 
   .course-subheadline {
