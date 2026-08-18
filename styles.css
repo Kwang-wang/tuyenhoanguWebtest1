@@ -2426,6 +2426,94 @@ h3 {
   display: none;
 }
 
+.legal-page main {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(218, 243, 233, 0.95), transparent 34%),
+    linear-gradient(180deg, #f7fbf9 0%, #ffffff 48%, #f7fbf9 100%);
+}
+
+.legal-hero {
+  padding: clamp(58px, 9vw, 108px) 0 clamp(22px, 4vw, 40px);
+}
+
+.legal-hero h1 {
+  max-width: 960px;
+  margin: 0 0 14px;
+  color: var(--color-heading);
+  font-size: clamp(2.35rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.legal-hero p {
+  margin: 0;
+  color: var(--color-accent-orange);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.legal-document {
+  max-width: 980px;
+  padding: clamp(22px, 4vw, 42px);
+  margin-bottom: clamp(54px, 8vw, 94px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.legal-document > p:first-child {
+  margin-top: 0;
+  color: var(--color-heading);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 700;
+}
+
+.legal-section {
+  padding: clamp(20px, 3vw, 30px) 0;
+  border-top: 1px solid rgba(207, 228, 219, 0.9);
+}
+
+.legal-section:last-child {
+  padding-bottom: 0;
+}
+
+.legal-section h2,
+.legal-section h3 {
+  color: var(--color-heading);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.legal-section h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.legal-section h3 {
+  margin: 28px 0 10px;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.legal-section h2 + h3 {
+  margin-top: 8px;
+}
+
+.legal-section p {
+  margin: 0 0 12px;
+}
+
+.legal-list {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+}
+
+.legal-list li::marker {
+  color: var(--color-primary-700);
+}
+
 @keyframes contactPanelIn {
   from {
     opacity: 0;
